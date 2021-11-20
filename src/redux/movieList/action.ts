@@ -11,7 +11,6 @@ export const resetAllLoaded = () => {
 export const getMovies =
   (keyword: string) => async (dispatch: any, getState: any) => {
     const { movieList } = getState();
-    console.log(movieList);
     const page = movieList.pageNumber;
     dispatch({
       type: GET_MOVIE_LIST.loading,

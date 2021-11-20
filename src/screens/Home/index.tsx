@@ -3,31 +3,10 @@ import { useHistory } from "react-router-dom";
 import { Background } from "../../atoms/Background";
 import { Section } from "../../atoms/Section";
 import { Helmet } from "react-helmet";
-// import { getOption } from "../../redux/options/action";
-// import { OptionProps } from "../../redux/options/type";
-// import { useSelector, useDispatch } from "react-redux";
-// import Select from "react-select";
-// const options = [
-//   { value: "chocolate", label: "Chocolate" },
-//   { value: "strawberry", label: "Strawberry" },
-//   { value: "vanilla", label: "Vanilla" },
-// ];
 
 const Home: React.FC<{}> = () => {
   const history = useHistory();
-  // const dispatch = useDispatch();
   const [value, setValue] = useState<string>("");
-  // let { options } = useSelector(({ options }: { options: OptionProps }) => {
-  //   return options;
-  // });
-  // useEffect(() => {
-  //   dispatch(getOption("batman"));
-  // }, []);
-  // const onKeyUp = (e: any) => {
-  //   if (e.key !== "Backspace" && e.key !== "CapsLock") {
-  //     setValue(value + e.key);
-  //   }
-  // };
 
   const handleChange = (e: any) => {
     e.preventDefault();

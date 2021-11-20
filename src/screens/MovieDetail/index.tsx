@@ -9,6 +9,7 @@ import { MovieDetailProps } from "../../redux/moviesDetail/type";
 import Label from "../../atoms/Label";
 import CastSection from "../../components/CastSection";
 import ImageModal from "../../components/ImageModal";
+import { Helmet } from "react-helmet";
 
 const MovieDetail: React.FC<{}> = () => {
   const dispatch = useDispatch();
@@ -25,6 +26,10 @@ const MovieDetail: React.FC<{}> = () => {
   }, [id]); //eslint-disable-line
   return (
     <Background color="bg-white">
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>{`${movieDetail.Title} | SearchMovie`}</title>
+    </Helmet>
       <Navbar />
       <Section yPadding="py-14">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-4">

@@ -12,6 +12,7 @@ import {
 import { MovieProps } from "../../redux/movieList/type";
 import { MovieListProps } from "../../redux/typeGlobal";
 import Card from "../../components/Card";
+import { Helmet } from "react-helmet";
 
 const MovieList: React.FC<{}> = () => {
   const dispatch = useDispatch();
@@ -50,9 +51,12 @@ const MovieList: React.FC<{}> = () => {
       dispatch(resetAllLoaded());
     };
   }, [dispatch]);
-  console.log(movieList);
   return (
     <Background color="bg-white">
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>{`${value} Search | SearchMovie`}</title>
+    </Helmet>
       <Navbar />
       <Section yPadding="py-14">
         <h2 className="text-lg font-semibold mb-4">
