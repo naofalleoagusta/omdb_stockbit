@@ -37,7 +37,7 @@ const MovieList: React.FC<{}> = () => {
     if (isBottom(el) && !movieList.loading) {
       dispatch(getMovies(value));
     }
-  }, [movieList.pageNumber, dispatch, movieList.loading]);
+  }, [value, dispatch, movieList.loading]);
   useEffect(() => {
     if (!movieList.allLoaded)
       document.addEventListener("scroll", trackScrolling);
