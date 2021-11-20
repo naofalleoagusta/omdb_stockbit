@@ -9,6 +9,7 @@ Before you start the app in your local computer, you need to run :
 ### `yarn install` or `yarn` or `npm install`
 These command will install all the package and the dependency for SearchMovie app.
 
+After running those command, you can follow the guide below.
 
 In the project directory, you can run:
 
