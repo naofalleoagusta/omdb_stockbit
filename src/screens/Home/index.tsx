@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Background } from "../../atoms/Background";
 import { Section } from "../../atoms/Section";
+import { Helmet } from "react-helmet";
 // import { getOption } from "../../redux/options/action";
 // import { OptionProps } from "../../redux/options/type";
 // import { useSelector, useDispatch } from "react-redux";
@@ -34,6 +35,10 @@ const Home: React.FC<{}> = () => {
   };
   return (
     <Background color="bg-white">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Home | SearchMovie</title>
+      </Helmet>
       <Section yPadding="py-12" isFullVH isCentered>
         <div className="text-center">
           <h1 className="font-extrabold text-5xl mb-4">SearchMovie</h1>

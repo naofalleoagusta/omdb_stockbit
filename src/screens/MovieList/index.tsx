@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getMovies } from "../../redux/movieList/action";
 import { MovieProps } from "../../redux/movieList/type";
 import { MovieListProps } from "../../redux/typeGlobal";
+import Card from "../../components/Card";
 
 const MovieList: React.FC<{}> = () => {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const MovieList: React.FC<{}> = () => {
   const value = location.search.slice(3, location.search.length);
   useEffect(() => {
     dispatch(getMovies(value));
-  }, [value]);
+  }, [value]); //es-lint
   return (
     <Background color="bg-white">
       <Navbar />
@@ -27,9 +28,18 @@ const MovieList: React.FC<{}> = () => {
         <h2 className="text-lg font-semibold mb-4">
           Result for keyword:'{value}'
         </h2>
-        <div className="grid grid-cols-2 lg:grid-cols-3">
-          {(listings || []).map((movie: MovieListProps) => {
-            return <span> {movie.Title}</span>;
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+          {(listings || []).map((movie: MovieListProps, idx: number) => {
+            return (
+              <Card
+                Title={movie.Title}
+                Year={movie.Year}
+                imdbID={movie.imdbID}
+                Type={movie.Type}
+                Poster={movie.Poster}
+                key={`movie-card-${idx}`}
+              />
+            );
           })}
         </div>
       </Section>
