@@ -2,13 +2,8 @@ import React, { useState } from "react";
 import { Background } from "../../atoms/Background";
 import { Section } from "../../atoms/Section";
 // import { FaSearch } from "react-icons/fa";
-import { useLocation, useHistory } from "react-router-dom";
+import { useLocation, useHistory, Link } from "react-router-dom";
 // import Select from "react-select";
-const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" },
-];
 
 const Navbar: React.FC<{}> = () => {
   const location = useLocation<any>();
@@ -24,7 +19,9 @@ const Navbar: React.FC<{}> = () => {
     <Background color="bg-white z-10  shadow-md ">
       <Section yPadding="py-6">
         <div className="flex flex-wrap justify-center lg:justify-between items-center">
-          <span className="font-bold text-lg">SearchMovie</span>
+          <Link to="/">
+            <span className="font-bold text-lg">SearchMovie</span>
+          </Link>
           <form
             className="flex"
             onSubmit={(e) => {

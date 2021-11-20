@@ -2,6 +2,7 @@ import { title } from "process";
 import React from "react";
 import { MovieListProps } from "../../redux/typeGlobal";
 import { Link } from "react-router-dom";
+import Label from "../../atoms/Label";
 
 const Card: React.FC<MovieListProps> = ({
   Title,
@@ -21,15 +22,14 @@ const Card: React.FC<MovieListProps> = ({
       </div>
       <div className="px-4 pb-4">
         <p className="text-md text-black font-semibold mb-4">
-          {Title}{" "}
-          <span className="bg-black px-2 text-white text-xs rounded-lg">
-            {Type}
-          </span>{" "}
-          <span className="bg-black px-2 text-white text-xs rounded-lg">
-            {Year}
-          </span>
+          {Title} <Label>{Type}</Label> <Label>{Year}</Label>
         </p>
-        <Link className=" py-1 px-4 rounded-xl bg-black text-white text-sm font-semibold hover:text-black hover:bg-white transition" to={`/detail/${imdbID}`}>View Detail</Link>
+        <Link
+          className=" py-1 px-4 rounded-xl bg-black text-white text-sm font-semibold hover:text-black hover:bg-white transition"
+          to={`/detail/${imdbID}`}
+        >
+          View Detail
+        </Link>
       </div>
     </div>
   );

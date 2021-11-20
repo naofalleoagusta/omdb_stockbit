@@ -1,6 +1,6 @@
 export interface RatingProps {
   Source: string;
-  value: string;
+  Value: string;
 }
 
 export interface MoviesDetailsProps {

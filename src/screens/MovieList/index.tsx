@@ -13,8 +13,8 @@ const MovieList: React.FC<{}> = () => {
   const dispatch = useDispatch();
   const location = useLocation<any>();
   const { listings } = useSelector(
-    ({ movieList }: { movieList: MovieProps }) => {
-      return { listings: movieList.listings };
+    ({ movieList }: { movieList: MovieProps | undefined }) => {
+      return { listings: movieList?.listings };
     }
   );
   const value = location.search.slice(3, location.search.length);

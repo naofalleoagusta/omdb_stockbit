@@ -16,3 +16,5 @@ export const getMovies = (keyword: string) => async (dispatch: any) => {
     console.log(error);
   }
 };
+
+// export const resetMovies =()=> a
