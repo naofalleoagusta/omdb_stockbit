@@ -3,6 +3,7 @@ import React from "react";
 import { MovieListProps } from "../../redux/typeGlobal";
 import { Link } from "react-router-dom";
 import Label from "../../atoms/Label";
+import ImageModal from "../ImageModal";
 
 const Card: React.FC<MovieListProps> = ({
   Title,
@@ -14,11 +15,12 @@ const Card: React.FC<MovieListProps> = ({
   return (
     <div className="shadow-xl rounded-lg text-center">
       <div className="flex justify-center py-4">
-        <img
+        <ImageModal src={Poster} alt={title} />
+        {/* <img
           src={Poster}
           alt={title}
           className="w-full h-auto rounded-tl-lg rounded-lg"
-        />
+        /> */}
       </div>
       <div className="px-4 pb-4">
         <p className="text-md text-black font-semibold mb-4">

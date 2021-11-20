@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { MovieDetailProps } from "../../redux/moviesDetail/type";
 import Label from "../../atoms/Label";
 import CastSection from "../../components/CastSection";
+import ImageModal from "../../components/ImageModal";
 
 const MovieDetail: React.FC<{}> = () => {
   const dispatch = useDispatch();
@@ -28,11 +29,7 @@ const MovieDetail: React.FC<{}> = () => {
       <Section yPadding="py-14">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-4">
           <div>
-            <img
-              className="w-full h-auto"
-              src={movieDetail.Poster}
-              alt={movieDetail.Title}
-            />
+            <ImageModal src={movieDetail.Poster} alt={movieDetail.Title} />
           </div>
           <div>
             <h1 className="text-3xl text-black font-semibold mb-4">

@@ -80,9 +80,6 @@ const MovieList: React.FC<{}> = () => {
             )}
           </div>
         </div>
-        {movieList.loading && (
-          <span className="text-md font-semibold">Loading...</span>
-        )}
       </Section>
     </Background>
   );
