@@ -21,7 +21,7 @@ const MovieDetail: React.FC<{}> = () => {
     if (!!id) {
       dispatch(getMovieDetail(id));
     }
-  }, [id]); //es-lint
+  }, [id]); //eslint-disable-line
   return (
     <Background color="bg-white">
       <Navbar />
