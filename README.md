@@ -4,14 +4,18 @@ SearchMovie is a search engine for movies. With this app, user will be able to f
 such as the casting, the producer, etc.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  
 
-## Available Scripts
 First step you need to do is cloning this repository by running this command:
 ### `git clone https://github.com/naofalleoagusta/omdb_stockbit.git`
 After that you need to run :
+### `cd omdb_stockbit`
+This command will change your directory to `omdb_stockit`.
+After that you need to run this command:
 ### `yarn install` or `yarn` or `npm install`
-These command will install all the package and the dependency for SearchMovie app.
+These command will install all the package and the dependency needed by SearchMovie app.
 
 After running those command, you can follow the guide below.
+
+## Available Scripts
 
 In the project directory, you can run:
 
