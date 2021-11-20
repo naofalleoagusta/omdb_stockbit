@@ -1,6 +1,5 @@
-// import { lazy } from "react";
-import Home from "../../screens/Home";
-// const Home = lazy(() => import("../../screens/Home"));
+import { lazy } from "react";
+const Home = lazy(() => import("../../screens/Home"));
 const homeRoutes = [
   {
     element: Home,

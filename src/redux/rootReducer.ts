@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
-import homeReducer from "./home/reducer";
+import movieList from "./movieList/reducer";
+import optionList from "./options/reducer";
 
 const appReducer = combineReducers({
-  home: homeReducer,
+  movieList: movieList,
+  options: optionList,
 });
 
 export default appReducer;

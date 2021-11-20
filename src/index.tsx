@@ -10,12 +10,10 @@ import { store } from "./configs/redux-store";
 
 ReactDOM.render(
   <Provider store={store}>
-    <Navbar />
     <Suspense fallback={<div>loading...</div>}>
       <Router>
         <Switch>
           {router.map((route) => {
-            console.log(route);
             return (
               <Route
                 key={route.key}

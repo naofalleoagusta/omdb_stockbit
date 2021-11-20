@@ -1,4 +1,4 @@
-export default (actionName: string) => {
+const actionTypeGenerator = (actionName: string) => {
   return {
     loading: `${actionName}_REQUEST`,
     success: `${actionName}_SUCCESS`,
@@ -7,3 +7,5 @@ export default (actionName: string) => {
     default: actionName,
   };
 };
+
+export default actionTypeGenerator;

@@ -1,16 +1,16 @@
-import { INITIAL_STATE, GET_MOVIE_DASHBOARD } from "./constant";
+import { INITIAL_STATE, GET_OPTION } from "./constant";
 
 const reducer = (state = INITIAL_STATE, payload: any) => {
   switch (payload.type) {
-    case GET_MOVIE_DASHBOARD.error:
-    case GET_MOVIE_DASHBOARD.loading:
+    case GET_OPTION.error:
+    case GET_OPTION.loading:
       return {
         ...state,
       };
-    case GET_MOVIE_DASHBOARD.success:
+    case GET_OPTION.success:
       return {
         ...state,
-        list: payload?.data?.data,
+        options: payload?.data,
       };
     default:
       return state;
