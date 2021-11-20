@@ -39,21 +39,6 @@ const Home: React.FC<{}> = () => {
             }}
           >
             <div>
-              {/* <Select
-                options={options}
-                className="w-80 rounded-none"
-                placeholder="Batman"
-                // onKeyDown={(e) => {
-                //   console.log(e);
-                //   if(e.keyCode===8){
-
-                //   }
-                // }}
-                components={{
-                  IndicatorSeparator: () => null,
-                  DropdownIndicator: () => null,
-                }}
-              /> */}
               <input
                 type="text"
                 className="w-80 h-full border-solid border-2 px-2 rounded-sm border-gray-600"
