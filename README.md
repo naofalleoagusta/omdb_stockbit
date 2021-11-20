@@ -1,8 +1,14 @@
-# Getting Started with Create React App
+# Getting Started with SearchMovie
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SearchMovie is a search engine for movies. With this app, user will be able to find more information about a film,
+such as the casting, the producer, etc.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 
 ## Available Scripts
+Before you start the app in your local computer, you need to run :
+### `yarn install` or `yarn` or `npm install`
+These command will install all the package and the dependency for SearchMovie app.
+
 
 In the project directory, you can run:
 
